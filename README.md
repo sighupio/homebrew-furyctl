@@ -1,3 +1,3 @@
 # homebrew-furyctl
 
-HomeBrew Tap for Sighup furyctl
+HomeBrew Tap for SIGHUP furyctl
