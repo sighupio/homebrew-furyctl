@@ -7,11 +7,11 @@ class Furyctl < Formula
 
   if OS.mac?
     url "https://github.com/sighupio/furyctl/releases/download/v0.4.0/furyctl-darwin-amd64.tar.gz"
-    sha256 "4ac7f1e151ac156c179415ed8faf3fa7c61a9cdaea91250fd81dd81dc2e81e4a"
+    sha256 "795bcfbb669f1815ee0d4fafd83a13057708776bfdebabffd4b70bd4010d2e1f"
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/sighupio/furyctl/releases/download/v0.4.0/furyctl-linux-amd64.tar.gz"
-    sha256 "3d5b29a696ad3dec3e4ca2caa625765f8e9303124f8f34b68937d7e6e86b2c8d"
+    sha256 "9d1623599113957eac99eeec3bfac5494c19df6442bc329483622afef85fa3b3"
   end
 
   conflicts_with "furyctl"
