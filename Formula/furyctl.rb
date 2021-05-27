@@ -2,16 +2,16 @@
 class Furyctl < Formula
   desc "Furyctl  binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.5.1"
+  version "0.5.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/sighupio/furyctl/releases/download/v0.5.1/furyctl-darwin-amd64.tar.gz"
-    sha256 "537a7662197442519c9ff01fc44e845fd2729dfddf55e7d7cf9b779634a3e93b"
+    url "https://github.com/sighupio/furyctl/releases/download/v0.5.2/furyctl-darwin-amd64.tar.gz"
+    sha256 "56a82732f874777e8fba3481d606e8baabd749de23e5b3e225fc9bfd56996994"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sighupio/furyctl/releases/download/v0.5.1/furyctl-linux-amd64.tar.gz"
-    sha256 "1f2e1c89ea14a8ae932de480482f3da9059117f346539ce9b07b1e12d7d2acd4"
+    url "https://github.com/sighupio/furyctl/releases/download/v0.5.2/furyctl-linux-amd64.tar.gz"
+    sha256 "d0c2a733286785a48582a29868a7316e504700974821510fcd572c292bb734b0"
   end
 
   conflicts_with "furyctl"
