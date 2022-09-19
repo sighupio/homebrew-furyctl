@@ -5,23 +5,31 @@
 class Furyctl < Formula
   desc "Furyctl binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.7.0"
+  version "0.8.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.7.0/furyctl-darwin-amd64.tar.gz"
-      sha256 "49dd5f48069b63c704784cc1499047617f2bc72935f6e08ea32ca2b3ac65dee5"
+    url "https://github.com/sighupio/furyctl/releases/download/v0.8.0/furyctl-darwin-amd64.tar.gz"
+    sha256 "b72d7b7cab4e9b13e053a61ce904ee843a022dd2a442920e296ad76977247296"
 
-      def install
-        bin.install 'furyctl'
+    def install
+      bin.install 'furyctl'
+    end
+
+    if Hardware::CPU.arm?
+      def caveats
+        <<~EOS
+          The darwin_arm64 architecture is not supported for the Furyctl
+          formula at this time. The darwin_amd64 binary may work in compatibility
+          mode, but it might not be fully supported.
+        EOS
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.7.0/furyctl-linux-amd64.tar.gz"
-      sha256 "a4617668e8d23e22fcdca3c760facf6b9e8b27c7bf1d39d3b64ffab2dd4a9271"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.8.0/furyctl-linux-amd64.tar.gz"
+      sha256 "e630ecf743ea22703e3b044d3f0a2e86af9ea5b675a0f686b0e98319003412fc"
 
       def install
         bin.install 'furyctl'
