@@ -5,11 +5,11 @@
 class Furyctl < Formula
   desc "Furyctl binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.10.0"
+  version "0.11.0"
 
   on_macos do
-    url "https://github.com/sighupio/furyctl/releases/download/v0.10.0/furyctl-darwin-amd64.tar.gz"
-    sha256 "197bf672cc62c59c7ec6924fb7893b1e791c610050ee54758d13307bfd5558df"
+    url "https://github.com/sighupio/furyctl/releases/download/v0.11.0/furyctl-darwin-amd64.tar.gz"
+    sha256 "b383ba164983b73885e066c62dcb83bc83d4c175c76c9ce92ac66aa7ea792b94"
 
     def install
       bin.install 'furyctl'
@@ -28,8 +28,8 @@ class Furyctl < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.10.0/furyctl-linux-amd64.tar.gz"
-      sha256 "d55ed73dff5bc0a06f158c2cf60ad01c1f134f2c98573141123ee80404eaf4fb"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.11.0/furyctl-linux-amd64.tar.gz"
+      sha256 "53579df00e19dcd555abe98a5ed58732f95deb9788d1c3827551b08575c15062"
 
       def install
         bin.install 'furyctl'
