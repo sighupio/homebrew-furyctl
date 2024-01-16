@@ -5,20 +5,20 @@
 class Furyctl < Formula
   desc "furyctl binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.27.0"
+  version "0.27.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.27.0/furyctl-darwin-arm64.tar.gz"
-      sha256 "27f81df1235e1c93926eb62abf1d4e3579d5a521a842e54852821caf88d6b6a8"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.27.1/furyctl-darwin-arm64.tar.gz"
+      sha256 "a7f9fe2bd25b0366fadfef12678b1959b361162f5020c82a569a07e952d637de"
 
       def install
         bin.install 'furyctl'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.27.0/furyctl-darwin-amd64.tar.gz"
-      sha256 "4a778026f0e689ef2cbd41cf350d9fad7d0915d76f127f549aaefa8e03c76e44"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.27.1/furyctl-darwin-amd64.tar.gz"
+      sha256 "8899e8866d0faceb25c33a6f6f4acda9c1dcd634911a62573f916e6b4dd3fc90"
 
       def install
         bin.install 'furyctl'
@@ -28,16 +28,16 @@ class Furyctl < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.27.0/furyctl-linux-arm64.tar.gz"
-      sha256 "3de0251763d0e25faa12c4c7345ad71738d69645bd8f50c479c86ea2eadf3c88"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.27.1/furyctl-linux-arm64.tar.gz"
+      sha256 "809141027b633eed50ef98f9d17f5c06e429c4ccb376f9a9f56a2bef643c7bd0"
 
       def install
         bin.install 'furyctl'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.27.0/furyctl-linux-amd64.tar.gz"
-      sha256 "a2e2be4675fb774b7922f998ef31f3b915067be225fb981aab73a9cc58124758"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.27.1/furyctl-linux-amd64.tar.gz"
+      sha256 "933d3582c674c6b92f8a0b4fbea1c4e54d742754900437c7d140e6e753ca3e27"
 
       def install
         bin.install 'furyctl'
