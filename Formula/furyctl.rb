@@ -5,20 +5,20 @@
 class Furyctl < Formula
   desc "furyctl binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.29.8"
+  version "0.29.9"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.29.8/furyctl-darwin-amd64.tar.gz"
-      sha256 "2389c4d37259370ccfc0d95e1bb22968cdd8e40179e4d96dbf126a1e1c04b91c"
+    on_intel do
+      url "https://github.com/sighupio/furyctl/releases/download/v0.29.9/furyctl-darwin-amd64.tar.gz"
+      sha256 "b9d0eb985c0b9bf1767cf6bcda4d8c4f4403d104ef1e37d0f4e0287456685d76"
 
       def install
         bin.install 'furyctl'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.29.8/furyctl-darwin-arm64.tar.gz"
-      sha256 "ceadb6a8c5b2b8a077151dce12565b9433e47b9d95dc2369653196c647f7b96e"
+    on_arm do
+      url "https://github.com/sighupio/furyctl/releases/download/v0.29.9/furyctl-darwin-arm64.tar.gz"
+      sha256 "24ec0fdfbb26e477d73dfce2ede28a12232ce75abee91bc27661cd7cb5525b6d"
 
       def install
         bin.install 'furyctl'
@@ -27,20 +27,24 @@ class Furyctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.29.8/furyctl-linux-amd64.tar.gz"
-      sha256 "08b3a6e551ecbb132a96b20df5c7c193b24d696c6c884ad6107a7c2a62d797a1"
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sighupio/furyctl/releases/download/v0.29.9/furyctl-linux-amd64.tar.gz"
+        sha256 "122a356c45136827911a738935afc04a813e35debf5c5abcf2ef6ef8eaafd6a3"
 
-      def install
-        bin.install 'furyctl'
+        def install
+          bin.install 'furyctl'
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.29.8/furyctl-linux-arm64.tar.gz"
-      sha256 "914d8d6c9b745e48b812e842a4d218bdf687419a3a1f5fbc9a017950c56afe84"
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/sighupio/furyctl/releases/download/v0.29.9/furyctl-linux-arm64.tar.gz"
+        sha256 "d3c1c757d7dc893204409ed79b265df7b20523bf3001b26f140cb0b310dce1a6"
 
-      def install
-        bin.install 'furyctl'
+        def install
+          bin.install 'furyctl'
+        end
       end
     end
   end
