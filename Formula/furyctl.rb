@@ -5,20 +5,20 @@
 class Furyctl < Formula
   desc "furyctl binary"
   homepage "https://gihub.com/sighupio/furyctl"
-  version "0.34.1"
+  version "0.35.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.34.1/furyctl-darwin-amd64.tar.gz"
-      sha256 "73757e090dd0362bd8fb6eb7bd405b815c5826fb44dc931b8fff98bb7f6db2e8"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.35.0/furyctl-darwin-amd64.tar.gz"
+      sha256 "94fa43af97f8f98e8e7dc4ccd5fe44e6eeb6a6c435f30cb281f33c2ef8f615ee"
 
       define_method(:install) do
         bin.install 'furyctl'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.34.1/furyctl-darwin-arm64.tar.gz"
-      sha256 "78faeed5bfd58e441a6509dce9db7f1234cbad2cd63bc864c26dd3ead09bba96"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.35.0/furyctl-darwin-arm64.tar.gz"
+      sha256 "3b7959ee48133821be9498178820cbf84679a6eae678d49169e9aa39373af976"
 
       define_method(:install) do
         bin.install 'furyctl'
@@ -28,15 +28,15 @@ class Furyctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.34.1/furyctl-linux-amd64.tar.gz"
-      sha256 "5703a1c2d3257c7eff15a267c17f33fb6a2f905d906eee4ae8a639fb89401f8b"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.35.0/furyctl-linux-amd64.tar.gz"
+      sha256 "8851966953d6dd1f6af934f5e4da2a287729400d46eaa5aebe50db1443380b8f"
       define_method(:install) do
         bin.install 'furyctl'
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sighupio/furyctl/releases/download/v0.34.1/furyctl-linux-arm64.tar.gz"
-      sha256 "29fb044423516fcda6fef6e93441f1f7eb9b29369f858fe7efc6285029fa9cf2"
+      url "https://github.com/sighupio/furyctl/releases/download/v0.35.0/furyctl-linux-arm64.tar.gz"
+      sha256 "250b3d16366bd81f23f44b81562e4e520ddae2263ffc8e2a3afcbc9a868103da"
       define_method(:install) do
         bin.install 'furyctl'
       end
